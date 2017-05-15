@@ -1,6 +1,6 @@
 # Vanilla Scroll Appear
 
-A simple libary to reveal elements on vertical scroll ([demo](https://www.spharian.be/lab/scroll-appear/demo.html)).
+A simple library to reveal elements on vertical scroll ([demo](https://www.spharian.be/lab/scroll-appear/demo.html)).
 
 ## Usage
 - Download the `scroll-appear.min.js` file and include it in your HTML: `<script src="scroll-appear.min.js"></script>`
