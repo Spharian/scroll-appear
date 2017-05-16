@@ -10,12 +10,12 @@
 
   setElements: =>
     for element in document.querySelectorAll @selector
-      if appearOffset = element.getAttribute('data-appear-offset')
+      if appearOffset = element.getAttribute("data-appear-offset")
         @elements.push
           node: element
           offset: parseInt appearOffset
           toggleClass:
-            element.getAttribute('data-appear-toggle-class') || @defaultToggleClass
+            element.getAttribute("data-appear-toggle-class") || @defaultToggleClass
       else
         console.warn "Please set a data-appear-offset for #{element.outerHTML}"
 

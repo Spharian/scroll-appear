@@ -23,11 +23,11 @@
       results = [];
       for (i = 0, len = ref.length; i < len; i++) {
         element = ref[i];
-        if (appearOffset = element.getAttribute('data-appear-offset')) {
+        if (appearOffset = element.getAttribute("data-appear-offset")) {
           results.push(this.elements.push({
             node: element,
             offset: parseInt(appearOffset),
-            toggleClass: element.getAttribute('data-appear-toggle-class') || this.defaultToggleClass
+            toggleClass: element.getAttribute("data-appear-toggle-class") || this.defaultToggleClass
           }));
         } else {
           results.push(console.warn("Please set a data-appear-offset for " + element.outerHTML));
