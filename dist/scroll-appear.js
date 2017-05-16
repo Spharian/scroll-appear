@@ -5,7 +5,6 @@
   this.ScrollAppear = ScrollAppear = (function() {
     function ScrollAppear(selector, options) {
       this.selector = selector;
-      this.toggleAppearClass = bind(this.toggleAppearClass, this);
       this.update = bind(this.update, this);
       this.setElements = bind(this.setElements, this);
       this.requestTick = bind(this.requestTick, this);

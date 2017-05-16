@@ -31,7 +31,7 @@
     @toggleAppearClass element for element in @elements
     @ticking = false
 
-  toggleAppearClass: (element) =>
+  toggleAppearClass: (element) ->
     if window.scrollY >= element.offset
       element.node.classList.remove(element.toggleClass)
     else
