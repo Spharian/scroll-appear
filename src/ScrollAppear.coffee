@@ -1,6 +1,5 @@
 @ScrollAppear = class ScrollAppear
   constructor: (@selector, options) ->
-    @lastScrollY = 0
     @ticking = false
     @elements = []
     @defaultToggleClass = options.defaultToggleClass || "hidden"
@@ -9,23 +8,22 @@
     window.addEventListener "scroll", @onScroll
 
   setElements: =>
-    for element in document.querySelectorAll @selector
+    for element in document.querySelectorAll(@selector)
       if appearOffset = element.getAttribute("data-appear-offset")
         @elements.push
           node: element
-          offset: parseInt appearOffset
+          offset: parseInt(appearOffset)
           toggleClass:
             element.getAttribute("data-appear-toggle-class") || @defaultToggleClass
       else
-        console.warn "Please set a data-appear-offset for #{element.outerHTML}"
+        console.warn("Please set a data-appear-offset for #{element.outerHTML}")
 
   onScroll: =>
-    @lastScrollY = window.pageYOffset
     @requestTick()
 
   requestTick: =>
     unless @ticking
-      requestAnimationFrame @update
+      requestAnimationFrame(@update)
       @ticking = true
 
   update: =>
@@ -34,6 +32,6 @@
 
   toggleAppearClass: (element) ->
     if window.pageYOffset >= element.offset
-      element.node.classList.remove element.toggleClass
+      element.node.classList.remove(element.toggleClass)
     else
-      element.node.classList.add element.toggleClass
+      element.node.classList.add(element.toggleClass)

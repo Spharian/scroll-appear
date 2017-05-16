@@ -9,7 +9,6 @@
       this.requestTick = bind(this.requestTick, this);
       this.onScroll = bind(this.onScroll, this);
       this.setElements = bind(this.setElements, this);
-      this.lastScrollY = 0;
       this.ticking = false;
       this.elements = [];
       this.defaultToggleClass = options.defaultToggleClass || "hidden";
@@ -37,7 +36,6 @@
     };
 
     ScrollAppear.prototype.onScroll = function() {
-      this.lastScrollY = window.pageYOffset;
       return this.requestTick();
     };
 
