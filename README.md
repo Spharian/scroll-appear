@@ -54,8 +54,8 @@ Some data attributes are also available for the **DOM elements**:
 
 Option               | Type    | Default         | Description
 -------------------- | ------- | --------------- | -----------
-`data-appear-offset` | integer | null (required) | Whenever the scroll height is equal to this value, the default class (`hidden` by default) is removed.
-`data-appear-toggle-class` | string | null | Name of the added/removed class when the element scroll offset is reached/unreached. Overrides the option passed to the `ScrollAppear` class.
+`data-appear-offset` | integer | null (required) | Whenever the scroll height is equal to this value, the default class (`hidden` if not changed in global options) is removed.
+`data-appear-toggle-class` | string | null | Name of the added/removed class when the element scroll offset is reached/unreached. Overrides the global options.
 
 ## Browser Compatibility
 - Chrome 24+
