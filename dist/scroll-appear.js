@@ -6,9 +6,9 @@
     function ScrollAppear(selector, options) {
       this.selector = selector;
       this.update = bind(this.update, this);
-      this.setElements = bind(this.setElements, this);
       this.requestTick = bind(this.requestTick, this);
       this.onScroll = bind(this.onScroll, this);
+      this.setElements = bind(this.setElements, this);
       this.lastScrollY = 0;
       this.ticking = false;
       this.elements = [];
@@ -16,18 +16,6 @@
       this.setElements();
       window.addEventListener("scroll", this.onScroll);
     }
-
-    ScrollAppear.prototype.onScroll = function() {
-      this.lastScrollY = window.scrollY;
-      return this.requestTick();
-    };
-
-    ScrollAppear.prototype.requestTick = function() {
-      if (!this.ticking) {
-        requestAnimationFrame(this.update);
-        return this.ticking = true;
-      }
-    };
 
     ScrollAppear.prototype.setElements = function() {
       var element, i, len, ref, results;
@@ -46,6 +34,18 @@
         }
       }
       return results;
+    };
+
+    ScrollAppear.prototype.onScroll = function() {
+      this.lastScrollY = window.scrollY;
+      return this.requestTick();
+    };
+
+    ScrollAppear.prototype.requestTick = function() {
+      if (!this.ticking) {
+        requestAnimationFrame(this.update);
+        return this.ticking = true;
+      }
     };
 
     ScrollAppear.prototype.update = function() {

@@ -8,15 +8,6 @@
     @setElements()
     window.addEventListener "scroll", @onScroll
 
-  onScroll: =>
-    @lastScrollY = window.scrollY
-    @requestTick()
-
-  requestTick: =>
-    unless @ticking
-      requestAnimationFrame @update
-      @ticking = true
-
   setElements: =>
     for element in document.querySelectorAll(@selector)
       if element.dataset.appearOffset
@@ -26,6 +17,15 @@
           toggleClass: element.dataset.appearToggleClass || @defaultToggleClass
       else
         console.warn("Please set a data-appear-offset for #{element.outerHTML}")
+
+  onScroll: =>
+    @lastScrollY = window.scrollY
+    @requestTick()
+
+  requestTick: =>
+    unless @ticking
+      requestAnimationFrame @update
+      @ticking = true
 
   update: =>
     @toggleAppearClass element for element in @elements
