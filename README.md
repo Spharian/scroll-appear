@@ -42,7 +42,7 @@ new ScrollAppear(".appear");
 
 By default, an `hidden` class will be added/removed whenever the scroll reaches the given offset. Read the [Configuration](https://github.com/Spharian/scroll-appear#configuration) section to change this class name.
 
-# Configuration
+## Configuration
 
 The `ScrollAppear` class accepts an options hash as second argument. Available options:
 
