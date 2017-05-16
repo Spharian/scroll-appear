@@ -36,4 +36,4 @@
     else
       element.node.classList.add(element.toggleClass)
 
-module.exports = @ScrollAppear unless typeof module == 'undefined'
+module.exports = @ScrollAppear unless typeof module == "undefined"
