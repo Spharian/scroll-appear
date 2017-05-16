@@ -1,6 +1,6 @@
 {
   "name": "scroll-appear",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A simple Vanilla JS library to reveal elements on vertical scroll",
   "main": "lib/index.js",
   "devDependencies": {
