@@ -1,5 +1,5 @@
 @ScrollAppear = class ScrollAppear
-  constructor: (@selector, options) ->
+  constructor: (@selector, options = {}) ->
     @ticking = false
     @elements = []
     @defaultToggleClass = options.defaultToggleClass || "hidden"
@@ -35,3 +35,5 @@
       element.node.classList.remove(element.toggleClass)
     else
       element.node.classList.add(element.toggleClass)
+
+module.exports = @ScrollAppear unless typeof module == 'undefined'
