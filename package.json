@@ -1,0 +1,27 @@
+{
+  "name": "scroll-appear",
+  "version": "1.0.0",
+  "description": "A simple JS vanilla library to reveal elements on vertical scroll",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-coffee": "^2.3.4",
+    "gulp-livereload": "^3.8.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spharian/scroll-appear.git"
+  },
+  "keywords": [
+    "appear",
+    "scroll",
+    "vanilla",
+    "javascript"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Spharian",
+  "license": "ISC"
+}
