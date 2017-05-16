@@ -6,7 +6,7 @@ var livereload = require("gulp-livereload");
 
 var distPath = "./dist/";
 var demoPath = "./demo/";
-var libPath = "./lib/";
+var libPath = "./src/";
 var filename = "scroll-appear";
 
 gulp.task("default", function() {
