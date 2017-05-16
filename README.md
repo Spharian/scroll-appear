@@ -27,7 +27,9 @@ new ScrollAppear(".appear");
 
 ## Usage
 
-Set a `data-appear-offset` attribute with an integer value to your elements and choose an "appearing" class. Example:
+Set a `data-appear-offset` attribute with an integer value to your elements and choose an "appearing" class.
+
+Example:
 ```html
 <button data-appear-offset="800" class="appear hidden">Appearing button</button>
 ```
