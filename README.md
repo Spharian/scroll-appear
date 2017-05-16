@@ -7,7 +7,7 @@ A simple Vanilla JS library to reveal elements on vertical scroll ([demo](https:
 ### npm
 
 1. `npm install --save scroll-appear`
-2. In your JS code, import the class and instantiate it:
+2. Import the class and instantiate it:
 ```jsx
 import ScrollAppear from "scroll-appear";
 
@@ -20,7 +20,7 @@ new ScrollAppear(".appear");
 <script src="scroll-appear.min.js"></script>
 ```
 
-2. Instantiate the library somewhere in your JavaScript code:
+2. Instantiate the library:
 ```js
 new ScrollAppear(".appear");
 ```
