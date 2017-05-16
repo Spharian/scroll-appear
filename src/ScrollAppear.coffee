@@ -13,10 +13,10 @@
       if element.dataset.appearOffset
         @elements.push
           node: element
-          offset: parseInt(element.dataset.appearOffset)
+          offset: parseInt element.dataset.appearOffset
           toggleClass: element.dataset.appearToggleClass || @defaultToggleClass
       else
-        console.warn("Please set a data-appear-offset for #{element.outerHTML}")
+        console.warn "Please set a data-appear-offset for #{element.outerHTML}"
 
   onScroll: =>
     @lastScrollY = window.scrollY
@@ -33,6 +33,6 @@
 
   toggleAppearClass: (element) ->
     if window.scrollY >= element.offset
-      element.node.classList.remove(element.toggleClass)
+      element.node.classList.remove element.toggleClass
     else
-      element.node.classList.add(element.toggleClass)
+      element.node.classList.add element.toggleClass
