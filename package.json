@@ -1,7 +1,7 @@
 {
   "name": "scroll-appear",
   "version": "1.0.0",
-  "description": "A simple JS vanilla library to reveal elements on vertical scroll",
+  "description": "A simple Vanilla JS library to reveal elements on vertical scroll",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-coffee": "^2.3.4",
