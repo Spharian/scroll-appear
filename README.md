@@ -11,7 +11,7 @@ A simple Vanilla JS library to reveal elements on vertical scroll ([demo](https:
 ```jsx
 import ScrollAppear from "scroll-appear";
 
-new ScrollAppear('.appear');
+new ScrollAppear(".appear");
 ```
 
 ### HTML script include
@@ -22,7 +22,7 @@ new ScrollAppear('.appear');
 
 2. Instantiate the library somewhere in your JavaScript code:
 ```js
-new ScrollAppear('.appear')
+new ScrollAppear(".appear");
 ```
 
 ## Usage
