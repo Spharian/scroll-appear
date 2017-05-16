@@ -37,7 +37,7 @@
     };
 
     ScrollAppear.prototype.onScroll = function() {
-      this.lastScrollY = window.scrollY;
+      this.lastScrollY = window.pageYOffset;
       return this.requestTick();
     };
 
@@ -59,7 +59,7 @@
     };
 
     ScrollAppear.prototype.toggleAppearClass = function(element) {
-      if (window.scrollY >= element.offset) {
+      if (window.pageYOffset >= element.offset) {
         return element.node.classList.remove(element.toggleClass);
       } else {
         return element.node.classList.add(element.toggleClass);

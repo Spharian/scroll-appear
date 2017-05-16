@@ -20,7 +20,7 @@
         console.warn "Please set a data-appear-offset for #{element.outerHTML}"
 
   onScroll: =>
-    @lastScrollY = window.scrollY
+    @lastScrollY = window.pageYOffset
     @requestTick()
 
   requestTick: =>
@@ -33,7 +33,7 @@
     @ticking = false
 
   toggleAppearClass: (element) ->
-    if window.scrollY >= element.offset
+    if window.pageYOffset >= element.offset
       element.node.classList.remove element.toggleClass
     else
       element.node.classList.add element.toggleClass
