@@ -9,7 +9,7 @@
     window.addEventListener "scroll", @onScroll
 
   setElements: =>
-    for element in document.querySelectorAll(@selector)
+    for element in document.querySelectorAll @selector
       if element.dataset.appearOffset
         @elements.push
           node: element
