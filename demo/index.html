@@ -20,6 +20,10 @@
       justify-content: center;
     }
 
+    header, button {
+      position: fixed;
+    }
+
     header {
       background: lightgrey;
       width: 100%;
@@ -36,6 +40,10 @@
     div {
       font-size: 40px;
       min-height: 800px;
+    }
+
+    div:first-of-type:not(.default-color) {
+      color: cyan;
     }
 
     button {
@@ -55,7 +63,6 @@
     }
 
     .appear {
-      position: fixed;
       transition: .2s ease-in-out;
     }
 
@@ -73,7 +80,10 @@
     I'm a fixed header
   </header>
 
-  <div>Scroll down...</div>
+  <div
+    class="appear default-color"
+    data-appear-offset="50"
+    data-appear-toggle-class="default-color">Scroll down...</div>
 
   <div>Yay!</div>
 
@@ -85,9 +95,7 @@
 
   <script src="scroll-appear.min.js"></script>
   <script>
-  new ScrollAppear('.appear', {
-    // defaultToggleClass: 'foo', // `hidden` by default
-  });
+  new ScrollAppear(".appear");
   </script>
 </body>
 </html>
