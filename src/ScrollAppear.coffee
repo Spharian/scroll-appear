@@ -19,12 +19,11 @@
         console.warn("Please set a data-appear-offset for #{element.outerHTML}")
 
   onScroll: =>
-    @requestTick()
+    @requestTick() unless @ticking
 
   requestTick: =>
-    unless @ticking
-      requestAnimationFrame(@update)
-      @ticking = true
+    requestAnimationFrame(@update)
+    @ticking = true
 
   update: =>
     @toggleAppearClass element for element in @elements
