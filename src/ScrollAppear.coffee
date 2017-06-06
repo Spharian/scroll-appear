@@ -7,7 +7,7 @@
     @setElements()
     window.addEventListener "scroll", @onScroll
 
-  setElements: =>
+  setElements: ->
     for element in document.querySelectorAll(@selector)
       if appearOffset = element.getAttribute("data-appear-offset")
         @elements.push
@@ -21,16 +21,17 @@
   onScroll: =>
     @requestTick() unless @ticking
 
-  requestTick: =>
+  requestTick: ->
     requestAnimationFrame(@update)
     @ticking = true
 
   update: =>
+    @scrollY = window.pageYOffset
     @toggleAppearClass element for element in @elements
     @ticking = false
 
   toggleAppearClass: (element) ->
-    if window.pageYOffset >= element.offset
+    if @scrollY >= element.offset
       element.node.classList.remove(element.toggleClass)
     else
       element.node.classList.add(element.toggleClass)
