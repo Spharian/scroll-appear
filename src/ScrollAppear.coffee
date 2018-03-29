@@ -21,6 +21,8 @@
         console.warn("Please set a valid data-appear-offset for #{element.outerHTML}")
 
   getAppearOffset: (offset) ->
+    return null unless offset
+
     if parsedOffset = parseInt(offset)
       return parsedOffset
 
