@@ -1,3 +1,4 @@
+
 # Vanilla Scroll Appear
 
 A simple Vanilla JS library to reveal elements on vertical scroll. Check the [live demo](https://www.spharian.be/lab/scroll-appear).
@@ -28,19 +29,27 @@ Download the `lib/scroll-appear.min.js` file and include it in your HTML:
 
 ## Usage
 
-In your HTML, set a `data-appear-offset` attribute with an integer value to your elements and choose an "appearing" class.
+In your HTML, set a `data-appear-offset` attribute to your elements and choose an "appearing" class.
 
-Example:
-```html
-<button data-appear-offset="800" class="appear hidden">Appearing button</button>
-```
-
-Then instantiate the class:
+In your JavaScript, don't forget to instantiate the class:
 ```js
 new ScrollAppear(".appear");
 ```
 
 By default, an `hidden` class will be added/removed whenever the scroll reaches the given offset. Read the [Configuration](https://github.com/Spharian/scroll-appear#configuration) section to change this class name.
+
+### Examples
+
+#### Simple integer value
+```html
+<button data-appear-offset="800" class="appear hidden">Appearing button</button>
+```
+
+#### Element based offset
+```html
+<button data-appear-offset="#element+100" class="appear hidden">Appearing button</button>
+```
+Target an element and apply some basic maths to it (here: `#element`'s height + `100px`).
 
 ## Configuration
 
@@ -54,7 +63,7 @@ Some data attributes are also available for the **DOM elements**:
 
 Option               | Type    | Default         | Description
 -------------------- | ------- | --------------- | -----------
-`data-appear-offset` | integer | null (required) | Whenever the scroll height is equal to this value, the default class (`hidden` if not changed in global options) is removed.
+`data-appear-offset` | integer, string | null (required) | Whenever the scroll height is equal to this value, the default class (`hidden` if not changed in global options) is removed.
 `data-appear-toggle-class` | string | null | Name of the added/removed class when the element scroll offset is reached/unreached. Overrides the global options.
 
 ## Browser Compatibility
