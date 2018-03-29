@@ -1,7 +1,7 @@
 
 # Vanilla Scroll Appear
 
-A simple Vanilla JS library to reveal elements on vertical scroll. Check the [live demo](https://www.spharian.be/lab/scroll-appear).
+A simple Vanilla JS library to reveal elements on vertical scroll (1.2 KB minified and gzipped, no dependencies). Check the [live demo](https://www.spharian.be/lab/scroll-appear).
 
 ```js
 new ScrollAppear(selector, [options]);
@@ -38,9 +38,9 @@ new ScrollAppear(".appear");
 
 By default, an `hidden` class will be added/removed whenever the scroll reaches the given offset. Read the [Configuration](https://github.com/Spharian/scroll-appear#configuration) section to change this class name.
 
-### Examples
+### HTML Examples
 
-#### Simple integer value
+#### Integer offset
 ```html
 <button data-appear-offset="800" class="appear hidden">Appearing button</button>
 ```
@@ -50,6 +50,7 @@ By default, an `hidden` class will be added/removed whenever the scroll reaches 
 <button data-appear-offset="#element+100" class="appear hidden">Appearing button</button>
 ```
 Target an element and apply some basic maths to it (here: `#element`'s height + `100px`).
+Sets the offset to `#element` height `+ 100` (operators available: `"+", "-", "/", "*"`)
 
 ## Configuration
 
