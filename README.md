@@ -30,7 +30,7 @@ Download the `lib/scroll-appear.min.js` file and include it in your HTML:
 
 ## Usage
 
-In your HTML, set a [`data-appear-offset`](https://github.com/Spharian/scroll-appear#integer-data-appear-offset) attribute to your elements and choose an "appearing" class.
+In your HTML, set a [`data-appear-offset`](https://github.com/Spharian/scroll-appear#integer-offset) attribute to your elements and choose an "appearing" class.
 
 In your JavaScript, instantiate the `ScrollAppear` class:
 ```js
@@ -39,12 +39,12 @@ new ScrollAppear(".appear");
 
 By default, an `hidden` class will be added/removed whenever the scroll reaches the given offset. Read the [Configuration](https://github.com/Spharian/scroll-appear#integer-data-appear-offset) section to change this class name.
 
-### Integer `data-appear-offset`
+### Integer offset
 ```html
 <button data-appear-offset="800" class="appear hidden">Appearing button</button>
 ```
 
-### Element based `data-appear-offset`
+### Element based offset
 ```html
 <button data-appear-offset="#element+100" class="appear hidden">Appearing button</button>
 ```
