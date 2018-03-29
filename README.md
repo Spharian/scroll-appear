@@ -1,8 +1,7 @@
-
-
 # Vanilla Scroll Appear
 
 A simple Vanilla JS library to reveal elements on vertical scroll (1.2 KB minified and gzipped, no dependencies).
+
 Check the [live demo](https://www.spharian.be/lab/scroll-appear).
 
 ```js
