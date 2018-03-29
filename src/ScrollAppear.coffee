@@ -4,10 +4,10 @@
     @defaultToggleClass = options.defaultToggleClass || "hidden"
 
     @setElements()
-    window.addEventListener "scroll", @onScroll.bind(this)
-    window.addEventListener "resize", @setElements.bind(this)
+    window.addEventListener "scroll", @onScroll
+    window.addEventListener "resize", @setElements
 
-  setElements: ->
+  setElements: =>
     @elements = []
 
     for element in document.querySelectorAll(@selector)
@@ -20,11 +20,11 @@
       else
         console.warn("Please set a valid data-appear-offset for #{element.outerHTML}")
 
-  getAppearOffset: (offset) =>
+  getAppearOffset: (offset) ->
     if Number.isInteger(parsedOffset = parseInt(offset))
       return parsedOffset
 
-    getElement = (offset) =>
+    getElement = (offset) ->
       try
         document.querySelector(offset)
       catch
