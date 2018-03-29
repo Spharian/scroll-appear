@@ -11,7 +11,8 @@
     @elements = []
 
     for element in document.querySelectorAll(@selector)
-      if (offset = @getAppearOffset(element.getAttribute("data-appear-offset"))) != null
+      if offset = @getAppearOffset(element.getAttribute("data-appear-offset"))
+        continue if offset < 0
         @elements.push
           node: element
           offset: offset
@@ -20,22 +21,22 @@
       else
         console.warn("Please set a valid data-appear-offset for #{element.outerHTML}")
 
-  getAppearOffset: (offset) ->
-    return null unless offset
+  getAppearOffset: (value) ->
+    return null unless value
 
-    if parsedOffset = parseInt(offset)
-      return parsedOffset
+    if intOffset = parseInt(value)
+      return intOffset
 
-    tryGetEl = (el) ->
-      try document.querySelector(el) catch then null
     for operator in ["+", "-", "/", "*"]
-      if (split = offset.split(operator)).length == 2
-        if element = tryGetEl(split[0])
-          return eval(element.clientHeight + operator + split[1])
-    if element = tryGetEl(offset)
-      return element.clientHeight
+      if (split = value.split(operator)).length == 2
+        [value, operand] = split
+        break
 
-    null
+    try
+      elementHeight = document.querySelector(value).clientHeight
+      if operand then eval(elementHeight + operator + operand) else elementHeight
+    catch
+      null
 
   onScroll: =>
     @requestTick() unless @ticking
