@@ -33,7 +33,7 @@ In your JavaScript, instantiate the `ScrollAppear` class:
 new ScrollAppear(".appear");
 ```
 
-By default, an `hidden` class will be added/removed whenever the scroll reaches the given offset. Read the [Configuration](#integer-data-appear-offset) section to change this class name.
+By default, an `hidden` class will be added/removed whenever the scroll reaches the given offset. Read the [Configuration](#configuration) section to change this class name.
 
 ### Integer offset
 ```html
