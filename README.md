@@ -1,4 +1,5 @@
 
+
 # Vanilla Scroll Appear
 
 A simple Vanilla JS library to reveal elements on vertical scroll (1.2 KB minified and gzipped, no dependencies). Check the [live demo](https://www.spharian.be/lab/scroll-appear).
@@ -29,28 +30,27 @@ Download the `lib/scroll-appear.min.js` file and include it in your HTML:
 
 ## Usage
 
-In your HTML, set a `data-appear-offset` attribute to your elements and choose an "appearing" class.
+In your HTML, set a [`data-appear-offset`]() attribute to your elements and choose an "appearing" class.
 
-In your JavaScript, don't forget to instantiate the class:
+In your JavaScript, instantiate the `ScrollAppear` class:
 ```js
 new ScrollAppear(".appear");
 ```
 
-By default, an `hidden` class will be added/removed whenever the scroll reaches the given offset. Read the [Configuration](https://github.com/Spharian/scroll-appear#configuration) section to change this class name.
+By default, an `hidden` class will be added/removed whenever the scroll reaches the given offset. Read the [Configuration](https://github.com/Spharian/scroll-appear#integer-data-appear-offset) section to change this class name.
 
-### HTML Examples
-
-#### Integer offset
+### Integer `data-appear-offset`
 ```html
 <button data-appear-offset="800" class="appear hidden">Appearing button</button>
 ```
 
-#### Element based offset
+### Element based `data-appear-offset`
 ```html
 <button data-appear-offset="#element+100" class="appear hidden">Appearing button</button>
 ```
-Target an element and apply some basic maths to it (here: `#element`'s height + `100px`).
-Sets the offset to `#element` height `+ 100` (operators available: `"+", "-", "/", "*"`)
+Uses (`#element`'s height `+ 100`)  as offset.
+
+**Operators available:** `+` `-` `/` `*`
 
 ## Configuration
 
