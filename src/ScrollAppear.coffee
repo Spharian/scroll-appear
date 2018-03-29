@@ -24,17 +24,13 @@
     if parsedOffset = parseInt(offset)
       return parsedOffset
 
-    getElement = (offset) ->
-      try
-        document.querySelector(offset)
-      catch
-        null
-
+    tryGetEl = (el) ->
+      try document.querySelector(el) catch then null
     for operator in ["+", "-", "/", "*"]
       if (split = offset.split(operator)).length == 2
-        if element = getElement(split[0])
+        if element = tryGetEl(split[0])
           return eval(element.clientHeight + operator + split[1])
-    if element = getElement(offset)
+    if element = tryGetEl(offset)
       return element.clientHeight
 
     null
