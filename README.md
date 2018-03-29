@@ -30,7 +30,7 @@ Download the `lib/scroll-appear.min.js` file and include it in your HTML:
 
 ## Usage
 
-In your HTML, set a [`data-appear-offset`]() attribute to your elements and choose an "appearing" class.
+In your HTML, set a [`data-appear-offset`](https://github.com/Spharian/scroll-appear#integer-data-appear-offset) attribute to your elements and choose an "appearing" class.
 
 In your JavaScript, instantiate the `ScrollAppear` class:
 ```js
