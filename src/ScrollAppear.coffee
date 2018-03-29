@@ -21,7 +21,7 @@
         console.warn("Please set a valid data-appear-offset for #{element.outerHTML}")
 
   getAppearOffset: (offset) ->
-    if Number.isInteger(parsedOffset = parseInt(offset))
+    if parsedOffset = parseInt(offset)
       return parsedOffset
 
     getElement = (offset) ->
